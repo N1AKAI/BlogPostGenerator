@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Generator</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <section class="mt-5">
+    <div class="container">
+      <h3 class="mb-3">قسم الأنمي</h3>
+      <form>
+        <div class="mb-3">
+          <select class="form-select" id="selectedAnime">
+            <option selected value="-1">اختر أنمي</option>
+          </select>
+        </div>
+        <div class="mb-2 row">
+          <div class="col-6">
+            <input type="text" class="form-control" id="animeTitleRomaji" placeholder="الاسم">
+          </div>
+          <div class="col-6">
+            <input type="text" class="form-control" id="animeTitleJp" placeholder="الاسم الياباني">
+          </div>
+        </div>
+        <div class="mb-2 row">
+          <div class="col-6">
+            <input type="text" class="form-control" id="animeAlternativeTitle" placeholder="اسم آخر">
+          </div>
+          <div class="col-6">
+            <input type="text" class="form-control" id="animeTitleAr" placeholder="الاسم العربي">
+          </div>
+        </div>
+        <div class="mb-2 row">
+          <div class="col-6">
+            <input type="text" class="form-control" id="animeType" placeholder="النوع: Tv, Ova, Movie...">
+          </div>
+          <div class="col-6">
+            <input type="text" class="form-control" id="animeTotalEps" placeholder="عدد الحلقات">
+          </div>
+        </div>
+        <div class="mb-2 row">
+          <div class="col-6">
+            <input type="text" class="form-control" id="animeStatus" placeholder="الحالة: مكتمل، مستمر، متوقف">
+          </div>
+          <div class="col-6">
+            <input type="text" class="form-control" id="animeStartAiring" placeholder="تاريخ بدية العرض">
+          </div>
+        </div>
+        <div class="mb-2 row">
+          <div class="col-6">
+            <input type="text" class="form-control" id="animeEndAiring" placeholder="تاريخ نهاية العرض">
+          </div>
+          <div class="col-6">
+            <input type="text" class="form-control" id="animeSeason" placeholder="الموسم">
+          </div>
+        </div>
+        <div class="mb-2 row">
+          <div class="col-6">
+            <input type="text" class="form-control" id="animeOrigins" placeholder="الاقتباس">
+          </div>
+          <div class="col-6">
+            <input type="text" class="form-control" id="animeStudios" placeholder="الاستوديو">
+          </div>
+        </div>
+        <div class="mb-2 row">
+          <div class="col-6">
+            <input type="text" class="form-control" id="animeRaiting" placeholder="التصنيف العمري">
+          </div>
+          <div class="col-6">
+            <input type="url" class="form-control" id="animeWebsite" placeholder="الموقع الرسمي">
+          </div>
+        </div>
+        <div class="mb-2 row">
+          <div class="col-6">
+            <input type="url" class="form-control" id="animeTwitter" placeholder="تويتر">
+          </div>
+          <div class="col-6">
+            <input type="url" class="form-control" id="animeMal" placeholder="MAL">
+          </div>
+        </div>
+        <div class="mb-2 row">
+          <div class="col-6">
+            <input type="url" class="form-control" id="animeAnilist" placeholder="AniList">
+          </div>
+          <div class="col-6">
+            <input type="url" class="form-control" id="animeAniDb" placeholder="AniDB">
+          </div>
+        </div>
+        <div class="mb-2 row">
+          <div class="col-6">
+            <input type="url" class="form-control" id="animePoster" placeholder="رابط غلاف الأنمي">
+          </div>
+          <div class="col-6">
+            <input type="url" class="form-control" id="animeEpDuration" placeholder="مدة الحلقة">
+          </div>
+        </div>
+        <div class="mb-2 row">
+          <div class="col-12">
+            <input type="url" class="form-control" id="animeGenres" placeholder="التصنيفات: أكشن، مغمرات، كوميدي...">
+          </div>
+        </div>
+        <div class="mb-2">
+          <textarea class="form-control" id="animeStory" cols="30" rows="5" placeholder="القصة..."></textarea>
+        </div>
+        <div class="mb-3">
+          <button type="button" id="add" class="btn btn-primary btn-sm">أضف</button>
+          <button type="button" id="edit" class="btn btn-success btn-sm disabled">تعديل</button>
+          <button type="button" id="delete" class="btn btn-danger btn-sm disabled">حذف</button>
+        </div>
+      </form>
+    </div>
+  </section>
+  <section class="mt-5">
+    <div class="container">
+      <h3 class="mb-3">قسم طاقم العمل</h3>
+      <form>
+        <div class="row gx-1 mb-2 align-items-center">
+          <div class="col-6">
+            <input type="text" class="form-control jobs" placeholder="الوظيفة">
+          </div>
+          <div class="col-5">
+            <input type="text" class="form-control names" placeholder="الاسم">
+          </div>
+          <div class="col-1">
+            <button type="button" class="btn btn-danger btn-sm" id="deleteJob">حذف</button>
+          </div>
+        </div>
+      </form>
+      <div class="mt-3">
+        <button type="button" class="btn btn-primary btn-sm" id="addJob">أضف</button>
+      </div>
+    </div>
+  </section>
+  <section class="mt-5">
+    <div class="container">
+      <h3 class="mb-3">قسم روابط الحلقة</h3>
+      <form>
+        <div class="row gx-1 mb-3 align-items-center ep-link">
+          <div class="col-11 mb-2" dir="ltr">
+            <input type="text" class="form-control ep-name" placeholder="[BAM25] Zom 100: Zombie ni Naru made ni Shitai 100 no Koto - 05 (1080p).mkv">
+          </div>
+          <div class="col-1 mb-2">
+            <button type="button" class="btn btn-danger btn-sm" id="deleteEpLink">حذف</button>
+          </div>
+          <div class="col-4 mb-2">
+            <input type="text" class="form-control server-name" placeholder="اسم السيرفر">
+          </div>
+          <div class="col-7 mb-2">
+            <input type="url" class="form-control server-link" placeholder="الرابط">
+          </div>
+          <div class="col-4 mb-2">
+            <input type="text" class="form-control ep-size" placeholder="حجم الحلقة">
+          </div>
+          <div class="col-7 mb-2">
+            <input type="url" class="form-control sub-link" placeholder="رابط ملف الترجمة">
+          </div>
+        </div>
+      </form>
+      <div class="mt-3">
+        <button type="button" class="btn btn-primary btn-sm" id="addEpLink">أضف</button>
+      </div>
+      <div class="mt-3">
+        <input type="url" class="form-control" placeholder="غلاف الحلقة" id="ep-img">
+        <input type="url" class="form-control mt-1" placeholder="الصورة المتحركة GIF" id="smileGif">
+      </div>
+    </div>
+  </section>
+  <section class="my-5">
+    <div class="d-flex justify-content-center align-items-center">
+      <button class="btn btn-success" onclick="generateCode()" data-bs-toggle="modal" data-bs-target="#exampleModal">أنشيء الكود</button>
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">الكود</h1>
+            <button type="button" class="btn-close m-0" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <pre><code class="language-html" id="code" dir="ltr">
+
+            </code></pre>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" onclick="copyCode()">نسخ الكود</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">اغلاق</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
